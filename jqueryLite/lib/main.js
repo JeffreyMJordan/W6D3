@@ -2,10 +2,10 @@ const DOMNodeCollection = require('./dom_node_collection');
 
 const $l = function(arg){
   let nodeArr = [];
-  if(arg instanceof String){
+  if(typeof(arg)==="string"){
     let nodeList = document.querySelectorAll(arg);
     nodeArr = Array.from(nodeList);
-  }else if(arg instanceof HTMLElement){
+  }else if(typeof(arg) ==="object"){
     let nodeList = document.querySelectorAll(arg);
     nodeArr = Array.from(nodeList);
   }
